@@ -1,26 +1,41 @@
-let currentSlide = 0;
+const imgs = document.getElementById('imgs')
+const leftBtn = document.getElementById('left')
+const rightBtn = document.getElementById('right')
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.carousel-images img');
-    if (index >= slides.length) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        currentSlide = index;
+const img = document.querySelectorAll('#imgs img')
+
+let idx = 0
+
+let interval = setInterval(run, 2000)
+
+function run() {
+    idx++
+    changeImage()
+}
+
+function changeImage() {
+    if(idx > img.length - 1) {
+        idx = 0
+    } else if(idx < 0) {
+        idx = img.length - 1
     }
-    const offset = -currentSlide * 100;
-    document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+
+    imgs.style.transform = `translateX(${-idx * 500}px)`
 }
 
-function nextSlide() {
-    showSlide(currentSlide + 1);
+function resetInterval() {
+    clearInterval(interval)
+    interval = setInterval(run, 2000)
 }
 
-function prevSlide() {
-    showSlide(currentSlide - 1);
-}
+rightBtn.addEventListener('click', () => {
+    idx++
+    changeImage()
+    resetInterval()
+})
 
-document.addEventListener('DOMContentLoaded', () => {
-    showSlide(currentSlide);
-});
+leftBtn.addEventListener('click', () => {
+    idx--
+    changeImage()
+    resetInterval()
+})
