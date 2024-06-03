@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Div Element</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .styled-div {
+            background-color: #3498db; /* Blue background color */
+            border: 4px solid #2c3e50; /* Dark border color with 4px thickness */
+            margin: 20px; /* Space around the element */
+            padding: 20px; /* Space inside the element */
+            border-radius: 10px; /* Rounded corners */
+            color: #fff; /* White text color */
+            text-align: center; /* Centered text */
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+        }
+        .styled-div:hover {
+            background-color: #2980b9; /* Darker blue background on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="styled-div">
+    Hover over this box to see the effect!
+</div>
+
+</body>
+</html>
