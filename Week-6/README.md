@@ -16,7 +16,7 @@ git checkout correct-branch
 
 **Remove the commits from the wrong branch**
 git checkout wrong-branch
-git reset --hard HEAD~n  # Replace 'n' with the number of commits to remove
+git reset --hard HEAD~n  **Replace** 'n' with the number of commits to remove
 
 **Push the changes to the remote repository**
 git push -f origin wrong-branch
