@@ -1,4 +1,4 @@
-1.You have made changes to multiple files in your Git repository and want to stage and commit these changes. What commands would you use to stage all the changes and commit them with a meaningful commit message?**
+1.You have made changes to multiple files in your Git repository and want to stage and commit these changes. What commands would you use to stage all the changes and commit them with a meaningful commit message?
 
 git add .
 git commit -m "Your meaningful commit message"
