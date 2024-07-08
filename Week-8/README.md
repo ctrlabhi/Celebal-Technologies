@@ -1,5 +1,5 @@
 # 1. You have made changes to multiple files in your Git repository and want to stage and commit these changes. What commands would you use to stage all the changes and commit them with a meaningful commit message?
-<span style="font-size: 25px;"Staging All Changes and Committing with a Meaningful Commit Message</span>
+<span style="font-size: 25px;">Staging All Changes and Committing with a Meaningful Commit Message</span>
 
 
 **Stage all changes:**
